@@ -23,6 +23,8 @@ function getgist ( gistid, cb ){
   var callback = function (err, res, body){
     if (!err && res.statusCode == 200){
       var data = JSON.parse(res.body);
+      var user = data.owner.login || 'unknown';
+      // console.log(user);
       var fileArray = [];
       for (var file in data.files) {
           fileArray.push(data.files[file]);
@@ -30,7 +32,8 @@ function getgist ( gistid, cb ){
       }
       return cb(null, {
         'title': data.description,
-        'user': data.owner.login,
+        'user': user,
+        'url': data.html_url,
         'files': fileArray
       });
     }
@@ -49,7 +52,7 @@ module.exports = function(app){
     var gistid = req.params.gistid;
     getgist( gistid , function( err, data ){
       if(!err){
-        res.render( 'gist', {title:data.title, author:data.user, files: data.files} );
+        res.render( 'gist', {title:data.title, author:data.user, url:data.url,files: data.files} );
       }
     });
   });

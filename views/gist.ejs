@@ -6,7 +6,8 @@
   </head>
   <body>
     <div class='content'>
-      <h1><%= title %></h1>
+      <h1 class='title'><%= title %></h1>
+      <p class='author'>by <a href='<%= url %>'><%= author %></a></p>
       <% for(var i=0; i<files.length; i++) {%>
         <h3><%= files[i].filename %></h3>
         <p><%- files[i].content %></p>
