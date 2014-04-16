@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express'),
 		http = require('http'),
 		path = require('path'),
@@ -20,6 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
+// app.use(require('less-middleware')({ src: __dirname + '/public' }));
+app.use(require('less-middleware')(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only

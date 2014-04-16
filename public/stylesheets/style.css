@@ -1,8 +1,19 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(249, 237, 206);
+  color: rgb(91, 70, 54);
+/* Dark Option */
+/*  background-color: rgb(46, 46, 46);*/
+/*  color: rgb(204, 204, 204);*/
+  font-family: chaparral-pro, serif;
+  font-size:23px;
 }
 
 a {
   color: #00B7FF;
+}
+
+.content {
+  width: 750px;
+  margin: 0 auto;
 }

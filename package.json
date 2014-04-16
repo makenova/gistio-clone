@@ -7,17 +7,17 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "express": "~3.4.8",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
     "ejs": "~0.8.5",
-    "less-middleware": "0.1.15",
-    "request": "^2.34.0",
+    "express": "~3.4.8",
+    "less-middleware": "^0.1.15",
     "marked": "^0.3.2",
-    "pygmentize-bundled": "^2.1.0"
+    "morgan": "~1.0.0",
+    "pygmentize-bundled": "^2.1.0",
+    "request": "^2.34.0",
+    "static-favicon": "~1.0.0"
   },
   "engines": {
     "node": "v0.10.25"
