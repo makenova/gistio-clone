@@ -30,7 +30,7 @@ function getgist ( gistid, cb ){
           fileArray.push(data.files[file]);
           if (data.files[file].language === "Markdown"){
             fileArray[fileArray.length-1].content = marked(fileArray[fileArray.length-1].content);
-          } else {
+          } else if (data.files[file].language){
             data.files[file].content = '<pre><code class="language-' +
             (data.files[file].language).toLowerCase() + '">' +
             data.files[file].content +'</pre></code>';
