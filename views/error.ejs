@@ -6,8 +6,18 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= error.message %></h1>
-    <h2><%= error.status %></h2>
-    <pre><%= error.stack %></pre>
+    <div class='content'>
+      <h1><%= title %></h1>
+      <h2>Something went horribly wrong!</h2>
+      Here are some things to check:
+      <ul>
+        <li>Did you forget to separate the host name from your gist ID with a "/" ?</li>
+        <li>Did you enter a valid gist ID?</li>
+        <li>Check your gist ID again</li>
+      </ul>
+      <p>
+        If all else fails, submit your issue <b>"<a href='https://github.com/makenova/gistio-clone/issues'>here</a>"</b>
+      </p>
+    </div>
   </body>
 </html>
