@@ -1,7 +1,7 @@
 var express = require('express'),
 		http = require('http'),
 		path = require('path'),
-    errHandler = require('./helpers/errHandler');
+    errHandler = require('./services/errHandler');
 
 var app = express();
 

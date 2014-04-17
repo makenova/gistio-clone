@@ -28,7 +28,13 @@ function getgist ( gistid, cb ){
       var fileArray = [];
       for (var file in data.files) {
           fileArray.push(data.files[file]);
-          fileArray[fileArray.length-1].content = marked(fileArray[fileArray.length-1].content);
+          if (data.files[file].language === "Markdown"){
+            fileArray[fileArray.length-1].content = marked(fileArray[fileArray.length-1].content);
+          } else {
+            data.files[file].content = '<pre><code class="language-' +
+            (data.files[file].language).toLowerCase() + '">' +
+            data.files[file].content +'</pre></code>';
+          }
       }
       return cb(null, {
         'title': data.description,
