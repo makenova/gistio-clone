@@ -31,3 +31,10 @@ Test with these public gists
 
 Test with this secret gist. The proto-gist!!
 * [Click me](http://gistio-clone.herokuapp.com/1)
+
+## TO-DO
+ * Design
+ * Syntax Highlighting
+  * Currently only JS highlighting is supported thanks to [prismjs](http://prismjs.com/).
+  Pulling in all the supported languages from prismjs would be heavy, so I would
+  like a better solution.
