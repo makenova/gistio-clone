@@ -8,6 +8,8 @@ marked.setOptions({
   breaks: false
 });
 
+// make the request to github for the gist id provided
+// TODO: serve gists from cache if no changes have been made since last request.
 exports.getgist = function ( gistid, cb ){
   var options = {
     url:'https://api.github.com/gists/' + gistid,
@@ -34,6 +36,10 @@ exports.getgist = function ( gistid, cb ){
   request(options, callback);
 };
 
+// loop over the files that are returned form github
+// if file is markdown, convert it to html with marked
+// if code, append and prepend pre and code tags to it
+// TODO Order the list of files in asciibetical order
 function prepFiles (files, callback) {
   var fileArray = [];
   for (var file in files) {

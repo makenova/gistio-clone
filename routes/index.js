@@ -1,4 +1,4 @@
-// Here ther be Dragons that spew messy code.
+// Here there be Dragons that spew messy code.
 // Caveat Lector
 
 var gist = require('../services/gist');
