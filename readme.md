@@ -10,7 +10,7 @@ There are two ways to use gistio-clone, you can either run it locally or you may
 use a free version, hosted on [heroku](https://www.heroku.com/).
 
 ### Hosted
-Visit [http://gistio-clone.herokuapp.com/](http://gistio-clone.herokuapp.com/).
+Visit [http://gistio.makenova.com/](http://gistio.makenova.com/).
 There are some sample gists on the home page.
 To view your own gists, simply append your gist ID to the URL.
 
