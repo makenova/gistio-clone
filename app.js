@@ -1,7 +1,12 @@
-var express = require('express'),
-		http = require('http'),
-		path = require('path'),
-    errHandler = require('./services/errHandler');
+var express = require('express');
+var http = require('http');
+var path = require('path');
+var errHandler = require('./services/errHandler');
+var compress = require('compression');
+var favicon = require('serve-favicon');
+var bodyParser = require('body-parser');
+var errorhandler = require('errorhandler')
+var morgan = require('morgan')
 
 var app = express();
 
@@ -9,19 +14,17 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.compress());
-app.use(express.favicon());
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
+app.use(compress());
+// app.use(favicon());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(require('less-middleware')({src: path.join(__dirname, 'public'), compress: true}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
-	app.use(express.logger('dev'));
-  app.use(express.errorHandler());
+	app.use(morgan('dev'));
+  app.use(errorhandler());
 } else {
   app.use(errHandler);
 }
