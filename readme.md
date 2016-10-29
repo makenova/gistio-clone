@@ -7,16 +7,16 @@ inspired it.
 
 ## Usage
 There are two ways to use gistio-clone, you can either run it locally or you may
-use a free version, hosted on [heroku](https://www.heroku.com/).
+use a free version, hosted [here](http://gist.makenova.com/).
 
 ### Hosted
-Visit [http://gistio.makenova.com/](http://gistio.makenova.com/).
+Visit [http://gist.makenova.com/](http://gist.makenova.com/).
 There are some sample gists on the home page.
 To view your own gists, simply append your gist ID to the URL.
 
 ### Run Locally
 Node is required to run this program locally. If you don't have it installed,
-install it from [here](http://nodejs.org/download/).
+install it from [here](http://nodejs.org/).
 
  1. clone this repo
  2. install dependencies by running `npm install`
@@ -26,12 +26,12 @@ install it from [here](http://nodejs.org/download/).
  6. profit
 
 Test with these public gists
- * [9454341](http://gistio-clone.herokuapp.com/9454341)
- * [7885923](http://gistio-clone.herokuapp.com/7885923)
- * [10685710](http://gistio-clone.herokuapp.com/10685710)
+ * [9454341](http://gist.makenova.com/9454341)
+ * [7885923](http://gist.makenova.com/7885923)
+ * [10685710](http://gist.makenova.com/10685710)
 
 Test with this secret gist. The proto-gist!!
-* [Click me](http://gistio-clone.herokuapp.com/1)
+* [Click me](http://gist.makenova.com/1)
 
 ## TO-DO
  - [ ] Design
