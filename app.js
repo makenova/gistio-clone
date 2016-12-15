@@ -7,6 +7,7 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var errorhandler = require('errorhandler')
 var morgan = require('morgan')
+var less = require('less-middleware')
 
 var app = express();
 
@@ -18,7 +19,7 @@ app.use(compress());
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(require('less-middleware')({src: path.join(__dirname, 'public'), compress: true}));
+app.use(less(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
