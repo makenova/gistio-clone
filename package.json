@@ -4,7 +4,10 @@
   "private": true,
   "subdomain": "gistio-clone",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "supervisor app.js",
+    "dev:debug": "supervisor -- --debug app.js",
+    "sync": "browser-sync start --proxy 'localhost:3000' --files 'public'"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -20,5 +23,9 @@
   },
   "engines": {
     "node": ">=v0.10.25"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "supervisor": "^0.12.0"
   }
 }
